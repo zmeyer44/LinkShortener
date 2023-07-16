@@ -9,6 +9,9 @@ export async function middleware(request: NextRequest) {
   if (!slug) {
     return NextResponse.redirect(`https://www.askclio.com/`);
   }
+  if (slug === "bot") {
+    return NextResponse.redirect(`https://www.blastofftutoring.com/`);
+  }
   if (slug === "e") {
     return NextResponse.redirect(`https://www.askclio.com/earn`);
   }
